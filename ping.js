@@ -139,7 +139,7 @@ var PingTest = (function($, w ,d){
 			for (var i = 0; i < arr.length, isFinite(arr[i]); i++) { 
 				sum += parseFloat(arr[i]); ++j; 
 			} 
-			parseFloat((j ? sum / j : 0).toFixed(3)); 
+			return parseFloat((j ? sum / j : 0).toFixed(3)); 
 		}
 	}
 })(jQuery, window, document);
