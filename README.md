@@ -13,5 +13,8 @@ PingTest.init({
 	area: '#area',
 	buttstart: '#pingstart',
 	buttstop: '#pingstop',
-	count: 14
+	count: 14,
+	finish: function(){
+		console.log('Ping finish');
+	}
 });
