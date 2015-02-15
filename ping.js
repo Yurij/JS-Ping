@@ -16,6 +16,7 @@ var PingTest = (function($, w ,d){
 			self.sh = self.args.shell || '$';
 			self.fl = self.args.file || 'ping.php';
 			self.pi = self.args.count || 4;
+			self.fi = self.args.finish || null;
 			self.it = 0;
 			self.rc = 0;
 			self.rc = [];
@@ -96,6 +97,9 @@ var PingTest = (function($, w ,d){
 				return this.sh + ' ' + (h ? 'ping -c ' + (this.pi + 1) + ' ' + h : '');
 		},
 		done: function(){
+			if(typeof this.fi === 'function'){
+				this.fi();
+			}
 			this.init();
 		},
 		data: function(){
