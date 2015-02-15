@@ -126,7 +126,7 @@ var PingTest = (function($, w ,d){
 			});
 			var avgSquareDiff = this.avg(squareDiffs);
 			var stdDev = Math.sqrt(avgSquareDiff);
-			return stdDev.toFixed(3);
+			return parseFloat(stdDev.toFixed(3));
 		},
 		max: function(arr) {
 			return arr.length ? Math.max.apply(null, arr) : 0;
@@ -139,7 +139,7 @@ var PingTest = (function($, w ,d){
 			for (var i = 0; i < arr.length, isFinite(arr[i]); i++) { 
 				sum += parseFloat(arr[i]); ++j; 
 			} 
-			return (j ? sum / j : 0).toFixed(3); 
+			parseFloat((j ? sum / j : 0).toFixed(3)); 
 		}
 	}
 })(jQuery, window, document);
