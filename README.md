@@ -5,7 +5,7 @@ JavaScript Ping Emulator
 Demo: https://find-ip.info/en/services/ip-service/ping-traceroute
 
 Setup & Options:
-
+<script>
 PingTest.init({
 	shell: '$',
 	file: 'ping.php',
@@ -15,3 +15,4 @@ PingTest.init({
 	buttstop: '#pingstop',
 	count: 14
 });
+</script>
