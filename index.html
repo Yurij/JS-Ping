@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="ping.js"></script>
+ </head>
+ <body>
+  <center>
+<span class="text">IP Addr or Domain</span> <input type="text" id="ip" value="" size="26" name="host_ip" class="input"></input> <br><br>
+<input type="button" id="pingstart" name="submit" class="button blue" value="Ping"></input> <input type="button" id="pingstop" name="submit" class="button blue" value="Abort"></input>
+</center>
+<div class="ipconsole">
+	<div id="area">
+	</div>
+</div>
+<script>
+PingTest.init({
+	file: 'ping.php',
+	input: '#ip',
+	area: '#area',
+	buttstart: '#pingstart',
+	buttstop: '#pingstop',
+	count: 14
+});
+</script>
+ </body>
+</html>
